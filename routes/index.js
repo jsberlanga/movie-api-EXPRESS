@@ -82,7 +82,8 @@ router.post("/search", (req, res, next) => {
       parsedData.results = parsedData.results[0].known_for;
     }
     res.render("index", {
-      parsedData: parsedData.results
+      parsedData: parsedData.results,
+      title: "Search results..."
     });
   });
 });
